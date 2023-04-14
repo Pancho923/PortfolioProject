@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+    </head>
+
+     <body>
+     <div id="header">
+            <div class="container">
+             <nav>
+                <!-- <img of logo when I make one 'img src="./images/logoPNG"' -->
+                <ul>
+                <li><a href="#">Home</a>
+                <li><a href="#">About Me</a>
+                <li><a href="#">Work</a>
+                <li><a href="#">Resume</a>
+                <li><a href="#">Contact Me</a>
+            
+                </ul>
+           </nav>
+           <div class="header-text">
+                <p>"Here goes what I am proficient in<br>like front/back end and other languages"</p>
+            <h1><span>Francisco</span>Verdugo Del Real</h1>
+
+           </div>
+            </div>
+     </div>
+     <!-- ABOUT ME SECTION -->
+     <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                 <img src="./images/Suit.JPG">   
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, my Name is Francisco Verdugo Del Real, but I also go by Pancho. I was born in San Diego, California but raised in Tijuana, B.C., MX, and Caborca, SON, MX. I have been involved in multiple industries that involve: food, medical manufacturing, and retail. I also have experience managing teams to ensure success on the floor, and have acquired various leadership skills.  </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Bilingual</span><br>Spanish & English</li>
+                            <li><span>Leadership</span><br>Managed Teams</li>
+                            <li><span>Organization</span><br>Time Management</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Summers of 2015-2017</span><br>Centurion/Tri-State/MedLin -Engineering Intern</li>
+                            <li><span>Nov. 2020 - March 2021</span><br>Nike Associate</li>
+                            <li><span>May 2021-May 2022</span><br>Shore Rider Bar Back/Expo</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2015-2018</span><br>Grand Canyon Universityh</li>
+                            <li><span>2018-Current</span><br>San Diego Mesa College</li>
+                            <li><span>2023-Current</span><br>University of California, San Diego<br> Coding Bootcamp </li>
+
+                        </ul>
+                    </div>
+            </div>
+        </div>
+     </div> 
+    </div>
+    <!--Work Done/Projects  -->
+    <div id="work">
+        <div class="container">
+            <h1 class="sub-title">Work</h1>
+            <div class="work-list">
+                <div>
+                 <h2>A Project Done </h2>   
+                 <p>I will add a brief description of the project completed</p>
+                 <a href="#">Learn More</a>
+                </div> 
+                <div>
+                    <h2>A Project Done </h2>   
+                    <p>I will add a brief description of the project completed</p>
+                    <a href="#">Learn More</a>
+                   </div> 
+                   <div>
+                    <h2>A Project Done </h2>   
+                    <p>I will add a brief description of the project completed</p>
+                    <a href="#">Learn More</a>
+                   </div> 
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- RESUME -->
+    <div id="resume">
+       <div class="container">
+        <h1 class="sub-title"><a href="./Resume.docx" download="">Resume</h1></a>
+        <div class="resume-list"></div>
+       </div> 
+    </div>
+<!-- CONTACT ME -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>fco.verdugo9@live.com</p>
+                <p>(619)997-4953</p>
+            </div>
+           
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+     <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+             
+
+        }
+
+     </script>
+    </body>    
+</html>
+  
